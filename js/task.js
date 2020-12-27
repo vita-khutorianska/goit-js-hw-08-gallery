@@ -63,7 +63,7 @@ function onOpenModal(event) {
 
 closeModalBtn.addEventListener('click', onCloseModal);
 
-//Закриття модалки різними методами
+//close modal
 
 function onCloseModal(event) {
   lightbox.classList.remove('is-open');
@@ -85,45 +85,3 @@ function closeModalByOverlay(event) {
   }
 }
 
-// //Будем створювати слайди
-
-// const leftBtn = document.querySelector('.move-left');
-// const rightBtn = document.querySelector('.move-right');
-
-// leftBtn.addEventListener('click', () => {
-//   const currentOpenImageIndex = Number(lightboxEl.dataset.index);
-//   const nextImage = gallery[currentOpenImageIndex - 2];
-
-//   rightBtn.removeAttribute('disabled');
-
-//   if (nextImage !== undefined) {
-//     lightboxEl.src = nextImage.original;
-//     lightboxEl.dataset.index = currentOpenImageIndex - 1;
-//   }
-
-//   //Перевірка на перший слайд
-//   if (currentOpenImageIndex === 1) {
-//     leftBtn.setAttribute('disabled', 'disabled');
-//   } else {
-//     leftBtn.removeAttribute('disabled');
-//   }
-// });
-
-// rightBtn.addEventListener('click', () => {
-//   const currentOpenImageIndex = 1;
-//   const nextImage = gallery[currentOpenImageIndex];
-
-//   leftBtn.removeAttribute('disabled');
-
-//   if (nextImage !== undefined) {
-//     lightboxEl.src = nextImage.original;
-//     lightboxEl.dataset.index = currentOpenImageIndex + 1;
-//   }
-
-//   // Перевірка на останній слайд
-//   if (currentOpenImageIndex === gallery.length) {
-//     rightBtn.setAttribute('disabled', 'disabled');
-//   } else {
-//     rightBtn.removeAttribute('disabled');
-//   }
-// });
